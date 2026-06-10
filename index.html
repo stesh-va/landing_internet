@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Бесплатный подбор домашнего интернета в Санкт-Петербурге и Ленинградской области. Перезвоним за 15 минут.">
+  <title>Бесплатный подбор интернета — СПб и Ленобласть</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <span class="logo">Интернет<span class="logo__accent">Домой</span></span>
+      <span class="header__badge">СПб и ЛО</span>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="hero">
+      <div class="container">
+        <div class="hero__badge">Бесплатно · Без обязательств</div>
+        <h1 class="hero__title">Подберём домашний интернет в&nbsp;СПб и&nbsp;Ленинградской области</h1>
+        <p class="hero__subtitle">Специалист перезвонит за&nbsp;15&nbsp;минут, проверит провайдеров по&nbsp;вашему адресу и&nbsp;предложит выгодный тариф</p>
+
+        <form class="lead-form" id="lead-form-hero" novalidate>
+          <label class="lead-form__label" for="phone-hero">Ваш телефон</label>
+          <div class="lead-form__row">
+            <input
+              class="lead-form__input"
+              type="tel"
+              id="phone-hero"
+              name="phone"
+              placeholder="+7 (___) ___-__-__"
+              inputmode="tel"
+              autocomplete="tel"
+              required
+            >
+            <button class="lead-form__btn" type="submit">Перезвоните мне</button>
+          </div>
+          <label class="lead-form__consent">
+            <input type="checkbox" name="consent" required>
+            <span>Я согласен на&nbsp;<a href="privacy.html" target="_blank">обработку персональных данных</a></span>
+          </label>
+          <p class="lead-form__note">Работаем ежедневно с&nbsp;9:00 до&nbsp;21:00</p>
+          <p class="lead-form__error" id="form-error-hero" hidden></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- Success screen (hidden by default) -->
+    <section class="success" id="success-screen" hidden>
+      <div class="container success__inner">
+        <div class="success__icon" aria-hidden="true">✓</div>
+        <h2 class="success__title">Заявка принята!</h2>
+        <p class="success__text">Мы перезвоним вам в&nbsp;течение 15&nbsp;минут в&nbsp;рабочие часы (9:00–21:00).</p>
+        <button class="success__back" type="button" id="success-back">Вернуться на главную</button>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="section" id="how">
+      <div class="container">
+        <h2 class="section__title">Как это работает</h2>
+        <ol class="steps">
+          <li class="steps__item">
+            <span class="steps__num">1</span>
+            <div>
+              <strong>Оставляете номер</strong>
+              <p>Это займёт 10 секунд</p>
+            </div>
+          </li>
+          <li class="steps__item">
+            <span class="steps__num">2</span>
+            <div>
+              <strong>Мы перезваниваем</strong>
+              <p>Уточним адрес и пожелания</p>
+            </div>
+          </li>
+          <li class="steps__item">
+            <span class="steps__num">3</span>
+            <div>
+              <strong>Подбираем тариф</strong>
+              <p>Сравним провайдеров по вашему дому</p>
+            </div>
+          </li>
+          <li class="steps__item">
+            <span class="steps__num">4</span>
+            <div>
+              <strong>Помогаем подключиться</strong>
+              <p>Бесплатно, без обязательств</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="section section--alt" id="benefits">
+      <div class="container">
+        <h2 class="section__title">Почему это удобно</h2>
+        <ul class="benefits">
+          <li class="benefits__item">
+            <span class="benefits__icon" aria-hidden="true">💰</span>
+            <strong>Бесплатно</strong>
+            <p>Вы ничего не платите за подбор</p>
+          </li>
+          <li class="benefits__item">
+            <span class="benefits__icon" aria-hidden="true">📍</span>
+            <strong>Под ваш адрес</strong>
+            <p>Проверим, кто реально подключает</p>
+          </li>
+          <li class="benefits__item">
+            <span class="benefits__icon" aria-hidden="true">⏱</span>
+            <strong>Экономия времени</strong>
+            <p>Не нужно обзванивать провайдеров</p>
+          </li>
+          <li class="benefits__item">
+            <span class="benefits__icon" aria-hidden="true">📶</span>
+            <strong>Выгодный тариф</strong>
+            <p>Сравним доступные варианты</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- For whom -->
+    <section class="section" id="for-whom">
+      <div class="container">
+        <h2 class="section__title">Кому подойдёт</h2>
+        <ul class="tags">
+          <li class="tags__item">Переезжаете в новую квартиру</li>
+          <li class="tags__item">Хотите сменить провайдера</li>
+          <li class="tags__item">Подключаете интернет впервые</li>
+          <li class="tags__item">Недовольны ценой или скоростью</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section--alt" id="faq">
+      <div class="container">
+        <h2 class="section__title">Частые вопросы</h2>
+        <div class="faq">
+          <details class="faq__item">
+            <summary class="faq__question">Это правда бесплатно?</summary>
+            <p class="faq__answer">Да. Подбор тарифа и консультация для вас бесплатны. Вы платите только провайдеру за подключение, если решите подключиться.</p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__question">Как быстро перезвонят?</summary>
+            <p class="faq__answer">В рабочие часы (с 9:00 до 21:00) — в течение 15 минут после заявки.</p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__question">Обязан ли я подключаться?</summary>
+            <p class="faq__answer">Нет. Вы можете просто узнать, какие тарифы доступны по вашему адресу, и принять решение позже.</p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__question">Какие провайдеры доступны?</summary>
+            <p class="faq__answer">Зависит от вашего адреса в Санкт-Петербурге или Ленинградской области. Мы проверим это при звонке и предложим подходящие варианты.</p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__question">Что нужно для подключения?</summary>
+            <p class="faq__answer">Обычно достаточно паспорта и адреса. Точный список документов подскажем при консультации — он зависит от провайдера.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section class="section cta-bottom" id="cta">
+      <div class="container">
+        <h2 class="section__title">Оставьте номер — перезвоним за 15 минут</h2>
+        <form class="lead-form" id="lead-form-bottom" novalidate>
+          <label class="lead-form__label" for="phone-bottom">Ваш телефон</label>
+          <div class="lead-form__row">
+            <input
+              class="lead-form__input"
+              type="tel"
+              id="phone-bottom"
+              name="phone"
+              placeholder="+7 (___) ___-__-__"
+              inputmode="tel"
+              autocomplete="tel"
+              required
+            >
+            <button class="lead-form__btn" type="submit">Получить подбор</button>
+          </div>
+          <label class="lead-form__consent">
+            <input type="checkbox" name="consent" required>
+            <span>Я согласен на&nbsp;<a href="privacy.html" target="_blank">обработку персональных данных</a></span>
+          </label>
+          <p class="lead-form__error" id="form-error-bottom" hidden></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__text">Бесплатный подбор домашнего интернета в Санкт-Петербурге и Ленинградской области</p>
+      <a class="footer__link" href="privacy.html">Политика конфиденциальности</a>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

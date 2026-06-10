@@ -1,0 +1,11 @@
+name = "internet-leads-worker"
+main = "src/index.js"
+compatibility_date = "2024-01-01"
+
+# Секреты задаются через CLI или Dashboard — НЕ храните их здесь!
+# wrangler secret put BOT_TOKEN
+# wrangler secret put CHAT_ID
+#
+# Переменные (не секретные):
+# [vars]
+# ALLOWED_ORIGINS = "https://username.github.io"
