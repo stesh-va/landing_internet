@@ -55,7 +55,10 @@
     const btn = form.querySelector('.lead-form__btn');
     if (!btn) return;
     btn.disabled = loading;
-    btn.textContent = loading ? 'Отправка…' : btn.dataset.originalText || btn.textContent;
+    const label = btn.querySelector('span');
+    if (label) {
+      label.textContent = loading ? 'Отправка…' : btn.dataset.originalText || label.textContent;
+    }
   }
 
   function showSuccess() {
@@ -116,7 +119,10 @@
     const consentCheckbox = form.querySelector('input[name="consent"]');
     const btn = form.querySelector('.lead-form__btn');
 
-    if (btn) btn.dataset.originalText = btn.textContent;
+    if (btn) {
+      const label = btn.querySelector('span');
+      btn.dataset.originalText = label ? label.textContent.trim() : btn.textContent.trim();
+    }
 
     if (phoneInput) initPhoneMask(phoneInput);
 

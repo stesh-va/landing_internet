@@ -7,89 +7,164 @@
   <title>Бесплатный подбор интернета — СПб и Ленобласть</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header class="header">
     <div class="container header__inner">
       <span class="logo">Интернет<span class="logo__accent">Домой</span></span>
-      <span class="header__badge">СПб и ЛО</span>
+      <a class="header__cta" href="#hero-form">Бесплатный подбор</a>
     </div>
   </header>
 
   <main>
-    <!-- Hero -->
     <section class="hero" id="hero">
-      <div class="container">
-        <div class="hero__badge">Бесплатно · Без обязательств</div>
-        <h1 class="hero__title">Подберём домашний интернет в&nbsp;СПб и&nbsp;Ленинградской области</h1>
-        <p class="hero__subtitle">Специалист перезвонит за&nbsp;15&nbsp;минут, проверит провайдеров по&nbsp;вашему адресу и&nbsp;предложит выгодный тариф</p>
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__blob hero__blob--1"></div>
+        <div class="hero__blob hero__blob--2"></div>
+      </div>
 
-        <form class="lead-form" id="lead-form-hero" novalidate>
-          <label class="lead-form__label" for="phone-hero">Ваш телефон</label>
-          <div class="lead-form__row">
-            <input
-              class="lead-form__input"
-              type="tel"
-              id="phone-hero"
-              name="phone"
-              placeholder="+7 (___) ___-__-__"
-              inputmode="tel"
-              autocomplete="tel"
-              required
-            >
-            <button class="lead-form__btn" type="submit">Перезвоните мне</button>
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <div class="hero__badges">
+            <span class="hero__badge">100% бесплатно</span>
+            <span class="hero__badge hero__badge--outline">СПб и Ленобласть</span>
           </div>
-          <label class="lead-form__consent">
-            <input type="checkbox" name="consent" required>
-            <span>Я согласен на&nbsp;<a href="privacy.html" target="_blank">обработку персональных данных</a></span>
-          </label>
-          <p class="lead-form__note">Работаем ежедневно с&nbsp;9:00 до&nbsp;21:00</p>
-          <p class="lead-form__error" id="form-error-hero" hidden></p>
-        </form>
+
+          <h1 class="hero__title">Подберём домашний интернет <span class="hero__title-accent">бесплатно</span> по&nbsp;вашему адресу</h1>
+          <p class="hero__subtitle">Не нужно обзванивать провайдеров — специалист сам перезвонит, проверит доступность и&nbsp;предложит выгодный тариф</p>
+
+          <ul class="hero__points">
+            <li class="hero__point">
+              <span class="hero__point-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </span>
+              Перезвоним за 15 минут
+            </li>
+            <li class="hero__point">
+              <span class="hero__point-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+              </span>
+              Проверим провайдеров у вас дома
+            </li>
+            <li class="hero__point">
+              <span class="hero__point-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              </span>
+              Без обязательств подключаться
+            </li>
+          </ul>
+        </div>
+
+        <div class="hero__form-wrap" id="hero-form">
+          <form class="lead-form lead-form--hero" id="lead-form-hero" novalidate>
+            <div class="lead-form__header">
+              <p class="lead-form__heading">Получите бесплатный подбор</p>
+              <p class="lead-form__subheading">Перезвоним и подберём тариф — вы ничего не платите</p>
+            </div>
+
+            <label class="lead-form__label" for="phone-hero">Номер телефона</label>
+            <div class="lead-form__row">
+              <input
+                class="lead-form__input"
+                type="tel"
+                id="phone-hero"
+                name="phone"
+                placeholder="+7 (___) ___-__-__"
+                inputmode="tel"
+                autocomplete="tel"
+                required
+              >
+              <button class="lead-form__btn" type="submit">
+                <span>Перезвоните мне</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </button>
+            </div>
+
+            <label class="lead-form__consent">
+              <input type="checkbox" name="consent" required>
+              <span>Я согласен на&nbsp;<a href="privacy.html" target="_blank">обработку персональных данных</a></span>
+            </label>
+
+            <div class="lead-form__meta">
+              <span class="lead-form__meta-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                9:00–21:00 ежедневно
+              </span>
+              <span class="lead-form__meta-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                Данные защищены
+              </span>
+            </div>
+
+            <p class="lead-form__error" id="form-error-hero" hidden></p>
+          </form>
+        </div>
       </div>
     </section>
 
-    <!-- Success screen (hidden by default) -->
+    <section class="trust-bar" aria-label="Преимущества сервиса">
+      <div class="container">
+        <ul class="trust-bar__list">
+          <li class="trust-bar__item">
+            <strong>0 ₽</strong>
+            <span>за подбор тарифа</span>
+          </li>
+          <li class="trust-bar__item">
+            <strong>15 мин</strong>
+            <span>до звонка</span>
+          </li>
+          <li class="trust-bar__item">
+            <strong>1 звонок</strong>
+            <span>вместо 5–10 провайдеров</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
     <section class="success" id="success-screen" hidden>
       <div class="container success__inner">
-        <div class="success__icon" aria-hidden="true">✓</div>
+        <div class="success__icon" aria-hidden="true">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
         <h2 class="success__title">Заявка принята!</h2>
         <p class="success__text">Мы перезвоним вам в&nbsp;течение 15&nbsp;минут в&nbsp;рабочие часы (9:00–21:00).</p>
         <button class="success__back" type="button" id="success-back">Вернуться на главную</button>
       </div>
     </section>
 
-    <!-- How it works -->
     <section class="section" id="how">
       <div class="container">
-        <h2 class="section__title">Как это работает</h2>
+        <div class="section__head">
+          <h2 class="section__title">Как это работает</h2>
+          <p class="section__desc">Всего 4 простых шага — от заявки до подключения</p>
+        </div>
         <ol class="steps">
           <li class="steps__item">
             <span class="steps__num">1</span>
-            <div>
+            <div class="steps__body">
               <strong>Оставляете номер</strong>
-              <p>Это займёт 10 секунд</p>
+              <p>Займёт меньше минуты</p>
             </div>
           </li>
           <li class="steps__item">
             <span class="steps__num">2</span>
-            <div>
+            <div class="steps__body">
               <strong>Мы перезваниваем</strong>
               <p>Уточним адрес и пожелания</p>
             </div>
           </li>
           <li class="steps__item">
             <span class="steps__num">3</span>
-            <div>
+            <div class="steps__body">
               <strong>Подбираем тариф</strong>
               <p>Сравним провайдеров по вашему дому</p>
             </div>
           </li>
           <li class="steps__item">
             <span class="steps__num">4</span>
-            <div>
+            <div class="steps__body">
               <strong>Помогаем подключиться</strong>
               <p>Бесплатно, без обязательств</p>
             </div>
@@ -98,28 +173,38 @@
       </div>
     </section>
 
-    <!-- Benefits -->
     <section class="section section--alt" id="benefits">
       <div class="container">
-        <h2 class="section__title">Почему это удобно</h2>
+        <div class="section__head">
+          <h2 class="section__title">Почему это удобно</h2>
+          <p class="section__desc">Экономим ваше время и деньги</p>
+        </div>
         <ul class="benefits">
           <li class="benefits__item">
-            <span class="benefits__icon" aria-hidden="true">💰</span>
+            <span class="benefits__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </span>
             <strong>Бесплатно</strong>
             <p>Вы ничего не платите за подбор</p>
           </li>
           <li class="benefits__item">
-            <span class="benefits__icon" aria-hidden="true">📍</span>
+            <span class="benefits__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+            </span>
             <strong>Под ваш адрес</strong>
             <p>Проверим, кто реально подключает</p>
           </li>
           <li class="benefits__item">
-            <span class="benefits__icon" aria-hidden="true">⏱</span>
+            <span class="benefits__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </span>
             <strong>Экономия времени</strong>
             <p>Не нужно обзванивать провайдеров</p>
           </li>
           <li class="benefits__item">
-            <span class="benefits__icon" aria-hidden="true">📶</span>
+            <span class="benefits__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1"/></svg>
+            </span>
             <strong>Выгодный тариф</strong>
             <p>Сравним доступные варианты</p>
           </li>
@@ -127,23 +212,39 @@
       </div>
     </section>
 
-    <!-- For whom -->
     <section class="section" id="for-whom">
       <div class="container">
-        <h2 class="section__title">Кому подойдёт</h2>
+        <div class="section__head">
+          <h2 class="section__title">Кому подойдёт</h2>
+          <p class="section__desc">Если узнали себя — оставьте номер</p>
+        </div>
         <ul class="tags">
-          <li class="tags__item">Переезжаете в новую квартиру</li>
-          <li class="tags__item">Хотите сменить провайдера</li>
-          <li class="tags__item">Подключаете интернет впервые</li>
-          <li class="tags__item">Недовольны ценой или скоростью</li>
+          <li class="tags__item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            Переезжаете в новую квартиру
+          </li>
+          <li class="tags__item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 3h5v5"/><path d="M8 3H3v5"/><path d="M12 22v-8.3a4 4 0 0 0-1.172-2.872L3 3"/><path d="m15 9 6-6"/></svg>
+            Хотите сменить провайдера
+          </li>
+          <li class="tags__item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            Подключаете интернет впервые
+          </li>
+          <li class="tags__item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2v4"/><path d="m16.2 7.8 2.9-2.9"/><path d="M18 12h4"/><path d="m16.2 16.2 2.9 2.9"/><path d="M12 18v4"/><path d="m4.9 19.1 2.9-2.9"/><path d="M2 12h4"/><path d="m4.9 4.9 2.9 2.9"/></svg>
+            Недовольны ценой или скоростью
+          </li>
         </ul>
       </div>
     </section>
 
-    <!-- FAQ -->
     <section class="section section--alt" id="faq">
       <div class="container">
-        <h2 class="section__title">Частые вопросы</h2>
+        <div class="section__head">
+          <h2 class="section__title">Частые вопросы</h2>
+          <p class="section__desc">Ответы на главные сомнения</p>
+        </div>
         <div class="faq">
           <details class="faq__item">
             <summary class="faq__question">Это правда бесплатно?</summary>
@@ -169,12 +270,14 @@
       </div>
     </section>
 
-    <!-- Bottom CTA -->
     <section class="section cta-bottom" id="cta">
-      <div class="container">
-        <h2 class="section__title">Оставьте номер — перезвоним за 15 минут</h2>
-        <form class="lead-form" id="lead-form-bottom" novalidate>
-          <label class="lead-form__label" for="phone-bottom">Ваш телефон</label>
+      <div class="container cta-bottom__inner">
+        <div class="cta-bottom__text">
+          <h2 class="cta-bottom__title">Готовы узнать, какой интернет доступен у&nbsp;вас дома?</h2>
+          <p class="cta-bottom__desc">Оставьте номер — перезвоним за 15 минут и бесплатно подберём тариф</p>
+        </div>
+        <form class="lead-form lead-form--compact" id="lead-form-bottom" novalidate>
+          <label class="lead-form__label" for="phone-bottom">Номер телефона</label>
           <div class="lead-form__row">
             <input
               class="lead-form__input"
@@ -186,7 +289,10 @@
               autocomplete="tel"
               required
             >
-            <button class="lead-form__btn" type="submit">Получить подбор</button>
+            <button class="lead-form__btn" type="submit">
+              <span>Получить подбор</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </button>
           </div>
           <label class="lead-form__consent">
             <input type="checkbox" name="consent" required>
